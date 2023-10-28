@@ -1,7 +1,7 @@
 
 /* Save */
 
-$('#saveGuide').click(function () {
+function save(){
     let guideId = $('#guideId').val();
     let guideName = $('#guideName').val();
     let address = $('#address').val();
@@ -31,12 +31,12 @@ $('#saveGuide').click(function () {
             console.log(error)
         }
     })
-});
+}
 
 
 /*Update*/
 
-$('#updateGuide').click(function () {
+function update() {
 
     let guideId = $('#guideId').val();
     let guideName = $('#guideName').val();
@@ -66,12 +66,12 @@ $('#updateGuide').click(function () {
             console.log(error)
         }
     })
-});
+}
 
 
 /*Search*/
 
-$('#searchGuide').click(function () {
+function search() {
     let guideId = $('#guideId').val();
     $.ajax({
         type: "GET",
@@ -105,12 +105,12 @@ $('#searchGuide').click(function () {
             alert("Guide Not Found..!");
         }
     })
-});
+}
 
 
 /* Delete*/
 
-$('#deleteGuide').click(function () {
+function Delete() {
     let guideId = $('#guideId').val();
     $.ajax({
         type: "DELETE",
@@ -124,7 +124,7 @@ $('#deleteGuide').click(function () {
             alert("Id not found or can't delete Guide")
         }
     })
-});
+}
 
 
 /* Get All*/
