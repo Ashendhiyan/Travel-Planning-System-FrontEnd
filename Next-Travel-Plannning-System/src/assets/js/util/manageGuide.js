@@ -1,35 +1,25 @@
-let guideId = $('#guideId').val();
-let guideName = $('#guideName').val();
-let address = $('#address').val();
-let gender = $('#gender').val();
-let number = $('#number').val();
-let experience = $('#experience').val();
-let manDayValue = $('#manDayValue').val();
-let guideImage = $('#guideImage').val();
-let nicImage = $('#nicImage').val();
-let guideIDImage = $('#guideIDImage').val();
-
-let formData = new FormData;
-
-formData.append("guideId", guideId);
-formData.append("guideName", guideName);
-formData.append("address", address);
-formData.append("gender", gender);
-formData.append("number", number);
-formData.append("experience", experience);
-formData.append("manDayValue", manDayValue);
-formData.append("guideImage", guideImage);
-formData.append("nicImage", nicImage);
-formData.append("guideIDImage", guideIDImage);
-
 
 /* Save */
 
 $('#saveGuide').click(function () {
+    let guideId = $('#guideId').val();
+    let guideName = $('#guideName').val();
+    let address = $('#address').val();
+    let gender = $('#gender').val();
+    let number = $('#number').val();
+    let experience = $('#experience').val();
+    let manDayValue = $('#manDayValue').val();
+    let guideImage = $('#guideImage').val();
+    let nicImage = $('#nicImage').val();
+    let guideIDImage = $('#guideIDImage').val();
+
+
     $.ajax({
         type: "POST",
         url: "http://localhost:8080/guideService/api/v1/guide",
-        data: formData,
+        data: {guideId:guideId, guideName:guideName, address:address, gender:gender, number:number,
+            experience:experience, manDayValue:manDayValue , guideImage:guideImage ,  nicImage , guideIDImage:guideIDImage
+        },
         contentType: false,
         processData: false,
         success: (response) => {
@@ -47,10 +37,24 @@ $('#saveGuide').click(function () {
 /*Update*/
 
 $('#updateGuide').click(function () {
+
+    let guideId = $('#guideId').val();
+    let guideName = $('#guideName').val();
+    let address = $('#address').val();
+    let gender = $('#gender').val();
+    let number = $('#number').val();
+    let experience = $('#experience').val();
+    let manDayValue = $('#manDayValue').val();
+    let guideImage = $('#guideImage').val();
+    let nicImage = $('#nicImage').val();
+    let guideIDImage = $('#guideIDImage').val();
+
     $.ajax({
         type: "PUT",
         url: "http://localhost:8080/guideService/api/v1/guide",
-        data: formData,
+        data: {guideId:guideId, guideName:guideName, address:address, gender:gender, number:number,
+            experience:experience, manDayValue:manDayValue , guideImage:guideImage ,  nicImage , guideIDImage:guideIDImage
+        },
         contentType: false,
         processData: false,
         success: (response) => {
@@ -68,6 +72,7 @@ $('#updateGuide').click(function () {
 /*Search*/
 
 $('#searchGuide').click(function () {
+    let guideId = $('#guideId').val();
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/guideService/api/v1/guide" + guideId,
@@ -106,6 +111,7 @@ $('#searchGuide').click(function () {
 /* Delete*/
 
 $('#deleteGuide').click(function () {
+    let guideId = $('#guideId').val();
     $.ajax({
         type: "DELETE",
         url: "http://localhost:8080/guideService/api/v1/guide" + guideId,
