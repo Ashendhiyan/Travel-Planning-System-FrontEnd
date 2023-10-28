@@ -1,43 +1,30 @@
-let hotelId = $('#hotelId').val();
-let hotelLocation = $('#hotelLocation').val();
-let hotelName = $('#hotelName').val();
-let coordinates = $('#coordinates').val();
-let roomType = $('#roomType').val();
-let starRate = $('#starRate').val();
-let packageCategory = $('#packageCategory').val();
-let hotelContactNumber = $('#hotelContactNumber').val();
-let cancelCriteria = $('#cancelCriteria').val();
-let remarks = $('#remarks').val();
-let hotelFee = $('#hotelFee').val();
-let email = $('#email').val();
-let image = $('#image').val();
-
-
-let formData = new FormData;
-
-formData.append("hotelId",hotelId);
-formData.append("hotelLocation",hotelLocation);
-formData.append("hotelName",hotelName);
-formData.append("coordinates",coordinates);
-formData.append("roomType",roomType);
-formData.append("starRate",starRate);
-formData.append("packageCategory",packageCategory);
-formData.append("hotelContactNumber",hotelContactNumber);
-formData.append("cancelCriteria",cancelCriteria);
-formData.append("remarks",remarks);
-formData.append("hotelFee",hotelFee);
-formData.append("email",email);
-formData.append("image",image);
-
-
 
 /* Save */
 
-$('#saveHotel').click(function () {
+function save() {
+
+    let hotelId = $('#hotelId').val();
+    let hotelLocation = $('#hotelLocation').val();
+    let hotelName = $('#hotelName').val();
+    let coordinates = $('#coordinates').val();
+    let roomType = $('#roomType').val();
+    let starRate = $('#starRate').val();
+    let packageCategory = $('#packageCategory').val();
+    let hotelContactNumber = $('#hotelContactNumber').val();
+    let cancelCriteria = $('#cancelCriteria').val();
+    let remarks = $('#remarks').val();
+    let hotelFee = $('#hotelFee').val();
+    let email = $('#email').val();
+    let image = $('#image').val();
+
+
     $.ajax({
         type: "POST",
         url: "http://localhost:8080/hotelService/api/v1/hotel",
-        data: formData,
+        data: {hotelId:hotelId, hotelLocation:hotelLocation, hotelName:hotelName,coordinates:coordinates,
+            roomType:roomType, starRate:starRate, packageCategory:packageCategory, hotelContactNumber:hotelContactNumber,
+            cancelCriteria:cancelCriteria, remarks:remarks, hotelFee:hotelFee, email:email, image:image
+        },
         contentType: false,
         processData: false,
         success: (response) => {
@@ -49,16 +36,34 @@ $('#saveHotel').click(function () {
             console.log(error)
         }
     })
-});
+}
 
 
 /*Update*/
 
-$('#updateHotel').click(function () {
+function update() {
+
+    let hotelId = $('#hotelId').val();
+    let hotelLocation = $('#hotelLocation').val();
+    let hotelName = $('#hotelName').val();
+    let coordinates = $('#coordinates').val();
+    let roomType = $('#roomType').val();
+    let starRate = $('#starRate').val();
+    let packageCategory = $('#packageCategory').val();
+    let hotelContactNumber = $('#hotelContactNumber').val();
+    let cancelCriteria = $('#cancelCriteria').val();
+    let remarks = $('#remarks').val();
+    let hotelFee = $('#hotelFee').val();
+    let email = $('#email').val();
+    let image = $('#image').val();
+
     $.ajax({
         type: "PUT",
         url: "http://localhost:8080/hotelService/api/v1/hotel",
-        data: formData,
+        data: {hotelId:hotelId, hotelLocation:hotelLocation, hotelName:hotelName,coordinates:coordinates,
+            roomType:roomType, starRate:starRate, packageCategory:packageCategory, hotelContactNumber:hotelContactNumber,
+            cancelCriteria:cancelCriteria, remarks:remarks, hotelFee:hotelFee, email:email, image:image
+        },
         contentType: false,
         processData: false,
         success: (response) => {
@@ -70,12 +75,13 @@ $('#updateHotel').click(function () {
             console.log(error)
         }
     })
-});
+}
 
 
 /*Search*/
 
-$('#searchHotel').click(function () {
+function search() {
+    let hotelId = $('#hotelId').val();
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/hotelService/api/v1/hotel" + hotelId,
@@ -113,12 +119,13 @@ $('#searchHotel').click(function () {
             alert("Guide Not Found..!");
         }
     })
-});
+}
 
 
 /* Delete*/
 
-$('#deleteHotel').click(function () {
+function Delete() {
+    let hotelId = $('#hotelId').val();
     $.ajax({
         type: "DELETE",
         url: "http://localhost:8080/hotelService/api/v1/hotel" + hotelId,
@@ -131,7 +138,7 @@ $('#deleteHotel').click(function () {
             alert("Id not found or can't delete Hotel")
         }
     })
-});
+}
 
 
 /* Get All*/
