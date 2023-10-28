@@ -16,8 +16,6 @@ function save() {
         data: {customerId: customerId, name: name, email: email, address:address, nic: nic,
             username: username, password: password, profilePic: profilePic
         },
-        contentType: false,
-        processData: false,
         success: (response) => {
             console.log(response)
             getAll()
@@ -48,8 +46,6 @@ function update() {
         data: {customerId: customerId, name: name, email: email, address:address, nic: nic,
             username: username, password: password, profilePic: profilePic
         },
-        contentType: false,
-        processData: false,
         success: (response) => {
             console.log(response)
             getAll()

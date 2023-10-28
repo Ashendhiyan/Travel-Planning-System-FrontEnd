@@ -25,8 +25,6 @@ function save() {
             roomType:roomType, starRate:starRate, packageCategory:packageCategory, hotelContactNumber:hotelContactNumber,
             cancelCriteria:cancelCriteria, remarks:remarks, hotelFee:hotelFee, email:email, image:image
         },
-        contentType: false,
-        processData: false,
         success: (response) => {
             console.log(response)
             getAll()
@@ -64,8 +62,6 @@ function update() {
             roomType:roomType, starRate:starRate, packageCategory:packageCategory, hotelContactNumber:hotelContactNumber,
             cancelCriteria:cancelCriteria, remarks:remarks, hotelFee:hotelFee, email:email, image:image
         },
-        contentType: false,
-        processData: false,
         success: (response) => {
             console.log(response)
             getAll()

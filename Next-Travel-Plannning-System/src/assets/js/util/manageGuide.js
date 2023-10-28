@@ -11,17 +11,14 @@ function save(){
     let manDayValue = $('#manDayValue').val();
     let guideImage = $('#guideImage').val();
     let nicImage = $('#nicImage').val();
-    let guideIDImage = $('#guideIDImage').val();
 
 
     $.ajax({
         type: "POST",
         url: "http://localhost:8080/guideService/api/v1/guide",
         data: {guideId:guideId, guideName:guideName, address:address, gender:gender, number:number,
-            experience:experience, manDayValue:manDayValue , guideImage:guideImage ,  nicImage , guideIDImage:guideIDImage
+            experience:experience, manDayValue:manDayValue , guideImage:guideImage ,  nicImage
         },
-        contentType: false,
-        processData: false,
         success: (response) => {
             console.log(response)
             getAll()
@@ -47,16 +44,13 @@ function update() {
     let manDayValue = $('#manDayValue').val();
     let guideImage = $('#guideImage').val();
     let nicImage = $('#nicImage').val();
-    let guideIDImage = $('#guideIDImage').val();
 
     $.ajax({
         type: "PUT",
         url: "http://localhost:8080/guideService/api/v1/guide",
         data: {guideId:guideId, guideName:guideName, address:address, gender:gender, number:number,
-            experience:experience, manDayValue:manDayValue , guideImage:guideImage ,  nicImage , guideIDImage:guideIDImage
+            experience:experience, manDayValue:manDayValue , guideImage:guideImage ,  nicImage
         },
-        contentType: false,
-        processData: false,
         success: (response) => {
             console.log(response)
             getAll()
@@ -87,7 +81,6 @@ function search() {
             $('#manDayValue').val(response.manDayValue);
             $('#guideImage').val(response.guideImage);
             $('#nicImage').val(response.nicImage);
-            $('#guideIDImage').val(response.guideIDImage);
         },
 
         error: function (error) {
@@ -101,7 +94,6 @@ function search() {
             $('#manDayValue').val(" ");
             $('#guideImage').val(" ");
             $('#nicImage').val(" ");
-            $('#guideIDImage').val(" ");
             alert("Guide Not Found..!");
         }
     })
@@ -138,7 +130,7 @@ function getAll(){
             response?.map(
                 (data) => {
                     let row = `<tr><td>${data.guideId}</td><td>${data.guideName}</td><td>${data.address}</td><td>${data.gender}</td><td>${data.number}</td><td>${data.experience}</td>
-                                <td>${data.manDayValue}</td><td>${data.guideImage}</td><td>${data.nicImage}</td><td>${data.guideIDImage}</td></tr>`;
+                                <td>${data.manDayValue}</td><td>${data.guideImage}</td><td>${data.nicImage}</td></tr>`;
                     $('#tBody').append(row);
                 }
             )
