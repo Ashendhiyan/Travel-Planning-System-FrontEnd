@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Next Travel</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<script src="assets/JQuery/jquery-3.6.1.min.js"></script>
+
+<!--Header starting-->
+<header>
+
+    <div id="menu-bar" class="fas fa-bars "></div>
+
+    <a href="#" class="logo"><span>NEXT</span>Travel</a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#services">Services</a>
+        <a href="#review">review</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <div class="icon">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+        <i class="fas fa-user-plus" id="signup-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search"id="search-bar"placeholder="Search here ... ">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>
+<!--Header Ending-->
+
+
+<!--Login form container-->
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+        <h3>login</h3>
+        <input type="email"class="box"placeholder="Enter your Email">
+        <input type="password"class="box"placeholder="Enter your Password">
+        <input type="submit"value="login now" class="btn">
+        <input type="checkbox"id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password ? <a href="#">click here</a></p>
+        <p>don't have a account? <a href="#">Register now</a></p>
+    </form>
+
+</div>
+
+
+
+<div class="signup-container">
+    <i class="fas fa-times" id="signUpForm-close"></i>
+
+    <form action="#">
+        <h3 class="title">Sign Up</h3>
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" placeholder="Enter Username" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter Your Email" required>
+            </div>
+            <div class="input-box">
+                <span class="details">NIC</span>
+                <input type="text" placeholder="Enter Your NIC" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" placeholder="Enter Your Address" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" placeholder="Create Password" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="password" placeholder="Confirm Your Password" required>
+            </div>
+        </div>
+        <div class="button">
+            <input type="button" value="Register">
+        </div>
+    </form>
+</div>
+
+<!--home section starts-->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>adventure is worthwhile</h3>
+        <p>discover new places with us, adventure awaits</p>
+        <a href="#" class="btn">Discover More</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="assets/videos/vid-1.mp4"></span>
+        <span class="vid-btn" data-src="assets/videos/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="assets/videos/vid-3.mp4"></span>
+        <span class="vid-btn" data-src="assets/videos/vid-4.mp4"></span>
+        <span class="vid-btn" data-src="assets/videos/vid-5.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="assets/videos/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+<!--home section ends-->
+
+
+<!--package section starts-->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="review-slider">
+        <div class="swiper-wrapper">
+
+            <div class="slider">
+                <div class="box">
+                    <h3>Super Luxury</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam aut delectus reiciendis tenetur.
+                        A aperiam cumque dignissimos dolor dolores earum eos explicabo iure iusto mollitia,
+                        necessitatibus omnis repudiandae sint!</p>
+                        <a href="superluxury.html"  class="btn" >see more</a>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="box">
+                    <h3>Luxury</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam aut delectus reiciendis tenetur.
+                        A aperiam cumque dignissimos dolor dolores earum eos explicabo iure iusto mollitia,
+                        necessitatibus omnis repudiandae sint!</p>
+                        <a href="luxury.html" class="btn">see more</a>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="box">
+                    <h3>Mid-level</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam aut delectus reiciendis tenetur.
+                        A aperiam cumque dignissimos dolor dolores earum eos explicabo iure iusto mollitia,
+                        necessitatibus omnis repudiandae sint!</p>
+                        <a href="midlevel.html" class="btn">see more</a>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="box">
+                    <h3>Regular</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam aut delectus reiciendis tenetur.
+                        A aperiam cumque dignissimos dolor dolores earum eos explicabo iure iusto mollitia,
+                        necessitatibus omnis repudiandae sint!</p>
+                        <a href="regular.html" class="btn">see more</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!--package section ends-->
+
+
+
+<!--Service section Starts-->
+<section class="services" id="services">
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi beatae,
+                corporis debitis dicta dignissimos ducimus ea eaque eius facere facilis molestiae
+                necessitatibus neque nisi officia provident quam sapiente totam.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi beatae,
+                corporis debitis dicta dignissimos ducimus ea eaque eius facere facilis molestiae
+                necessitatibus neque nisi officia provident quam sapiente totam.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safety Guiders</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi beatae,
+                corporis debitis dicta dignissimos ducimus ea eaque eius facere facilis molestiae
+                necessitatibus neque nisi officia provident quam sapiente totam.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>around the world </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi beatae,
+                corporis debitis dicta dignissimos ducimus ea eaque eius facere facilis molestiae
+                necessitatibus neque nisi officia provident quam sapiente totam.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>fastest Travels</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi beatae,
+                corporis debitis dicta dignissimos ducimus ea eaque eius facere facilis molestiae
+                necessitatibus neque nisi officia provident quam sapiente totam.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventures </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi beatae,
+                corporis debitis dicta dignissimos ducimus ea eaque eius facere facilis molestiae
+                necessitatibus neque nisi officia provident quam sapiente totam.</p>
+        </div>
+    </div>
+</section>
+<!--Service section End-->
+
+
+
+<!--footer section starts-->
+
+    <class class="footer">
+        <h1 class="credit"> Created by <span> Next Travel pvt</span> | all rights reserved.!</h1>
+    </class>
+
+<!--footer section ends-->
+
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,555 @@
+@charset "UTF-8";
+/*
+$content-width will be the max width of the content within the navigation bar.
+$breakpoint determines at which width the media query breakpoint will take effect.
+*/
+
+body {
+    background-color: #30336b;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+nav {
+    float: right;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    float: left;
+    position: relative;
+}
+nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #ffffff;
+    color: #463f3f;
+    text-decoration: none;
+    /*
+    The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+    */
+}
+nav ul li a:hover {
+    background: #f2f2f2;
+    color: #fb5958;
+}
+nav ul li a:not(:only-child):after {
+    padding-left: 4px;
+    content: ' ▾';
+}
+nav ul li ul li {
+    min-width: 190px;
+}
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+}
+
+.nav-dropdown {
+    position: absolute;
+    z-index: 1;
+    /* Guarantees that the dropdown will display on top of any content. */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    height: 70px;
+    width: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+    .nav-mobile {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        padding: 70px 0 15px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul li {
+        float: none;
+    }
+    nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+    }
+    nav ul li ul li a {
+        padding-left: 30px;
+    }
+}
+#nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #463f3f;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+    top: -10px;
+}
+#nav-toggle span:after {
+    bottom: -10px;
+}
+#nav-toggle.active span {
+    background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+}
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+    .nav-list {
+        display: block !important;
+    }
+}
+/*
+.navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+*/
+.navigation {
+    height: 70px;
+    background: #ffffff;
+}
+
+/*
+.nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
+*/
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+    color: #463f3f;
+    text-decoration: none;
+}
+
+ /*=================================================*/
+    /*dashboard*/
+/**{
+    box-sizing: border-box;
+}*/
+/*body {
+    background: #eef0f2;
+}*/
+.card{
+    font-family: sans-serif;
+    padding: 1rem;
+    width: 16rem;
+    height: 10rem;
+    float: left;
+    margin: 1.5rem;
+    /*background: white;*/
+    box-shadow: 0 0 6px 2px rgba(0,0,0,.1);
+    transition: all .2s ease;
+    border-bottom: 2px solid transparent;
+}
+.card:hover{
+    /*border-bottom: 2px solid #008571;*/
+    border-bottom: 2px solid black;
+}
+.card.selected{
+    transform: scale(1.075);
+    box-shadow: 0 0 16px 1px rgba(0,0,0,.3);
+}
+
+
+ /*//////////////////////////////*/
+
+/*
+#form-border {
+    border-style: solid;
+    border-color: rgb(201, 76, 76);
+}*/
+/*#form-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+.form-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-center {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    margin-left: 25%;
+}
+.input-names {
+    color: gray;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+ /*for add photo button*/
+.container{
+    height: 125px;
+    width: 150px;
+    position: relative;
+}
+.container .wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper.active{
+    border: none;
+}
+.wrapper .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper .icon{
+    font-size: 100px;
+    color: #9658fe;
+}
+.wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #5B5B7B;
+}
+.wrapper #cancel-btn i{
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    color: #9658fe;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper.active:hover #cancel-btn i{
+    display: block;
+}
+
+.wrapper #cancel-btn i:hover{
+    color: #e74c3c;
+}
+.wrapper .file-name{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    display: none;
+    /*background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);*/
+    background: #30336b;
+}
+.wrapper.active:hover .file-name{
+    display: block;
+}
+.container #custom-btn{
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    /*text-transform: uppercase;*/
+    cursor: pointer;
+    /*background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);*/
+    background: #30336b;
+}
+
+
+ /*for save button*/
+.btn {
+    background: #30336b;
+    color: white;
+    /*position: relative;
+    right: 50%;
+    bottom: 15px;*/
+}
+
+
+    /*////////////////////////////////*/
+.font-login {
+    color: gray;
+    font-weight: lighter;
+    font-size: medium;
+}
+.vl {
+    border-left: 2px solid gray;
+    height: 100%;
+}
+#p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+#p2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+#p3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+#p4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+#p-already {
+    margin-left: 55px;
+}
+#p-already2 {
+    margin-left: 55px;
+}
+#p-already3 {
+    margin-left: 55px;
+}
+#p-already4 {
+    margin-left: 55px;
+}
+.btnReg {
+    width: 100%;
+}
+
+
+/*for Customer NIC add photo button*/
+.container2{
+    height: 75px;
+    width: 100px;
+    position: relative;
+}
+.container2 .wrapper2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper2.active{
+    border: none;
+}
+.wrapper2 .image2{
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper2 .icon2{
+    font-size: 50px;
+    color: #9658fe;
+}
+.wrapper2 .text2{
+    font-size: 10px;
+    font-weight: 500;
+    color: #5B5B7B;
+}
+.wrapper2 #cancel-btn2 i{
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    color: #9658fe;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper2.active:hover #cancel-btn2 i{
+    display: block;
+}
+
+.wrapper2 #cancel-btn2 i:hover{
+    color: #e74c3c;
+}
+.wrapper2 .file-name2{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    display: none;
+    /*background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);*/
+    background: #30336b;
+}
+.wrapper2.active:hover .file-name2{
+    display: block;
+}
+.container2 #custom-btn2 {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    /*text-transform: uppercase;*/
+    cursor: pointer;
+    /*background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);*/
+    background: #30336b;
+}
+
+/*for Customer Licien add photo button*/
+.container3{
+    height: 75px;
+    width: 100px;
+    position: relative;
+}
+.container3 .wrapper3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper3.active{
+    border: none;
+}
+.wrapper3 .image3{
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper3 .icon3{
+    font-size: 50px;
+    color: #9658fe;
+}
+.wrapper3 .text3{
+    font-size: 10px;
+    font-weight: 500;
+    color: #5B5B7B;
+}
+.wrapper3 #cancel-btn3 i{
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    color: #9658fe;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper3.active:hover #cancel-btn3 i{
+    display: block;
+}
+
+.wrapper3 #cancel-btn3 i:hover{
+    color: #e74c3c;
+}
+.wrapper3 .file-name3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    display: none;
+    /*background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);*/
+    background: #30336b;
+}
+.wrapper3.active:hover .file-name3{
+    display: block;
+}
+.container3 #custom-btn3 {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    /*text-transform: uppercase;*/
+    cursor: pointer;
+    /*background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);*/
+    background: #30336b;
+}
