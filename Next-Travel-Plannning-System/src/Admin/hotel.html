@@ -11,8 +11,7 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
 
 
 </head>
@@ -24,7 +23,7 @@
 
 
 <form class="row g-3 needs-validation" novalidate>
-    <div class="col-md-4">
+    <div class="col-md-2">
         <label class="form-label" for="hotelId">Hotel ID</label>
         <input class="form-control" id="hotelId" required type="text" >
         <div class="valid-feedback">
@@ -49,21 +48,21 @@
 -->
 
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <label class="form-label" for="hotelLocation">Location</label>
         <input class="form-control" id="hotelLocation" required type="text" >
         <div class="valid-feedback">
             Looks good!
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <label class="form-label" for="hotelName">Hotel Name</label>
         <input class="form-control" id="hotelName" required type="text" >
         <div class="valid-feedback">
             Looks good!
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <label class="form-label" for="coordinates">Coordinates</label>
         <select class="form-select" id="coordinates" required>
             <option disabled selected value="">................ </option>
@@ -76,7 +75,7 @@
         </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
         <label class="form-label" for="roomType">RoomType</label>
         <select class="form-select" id="roomType" required>
             <option disabled selected value="">AC/ Non-Ac/ Normal </option>
@@ -89,7 +88,7 @@
         </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
         <label class="form-label" for="starRate">Star Rate</label>
         <select class="form-select" id="starRate" required>
             <option disabled selected value=""> </option>
@@ -117,14 +116,14 @@
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-2">
         <label class="form-label" for="hotelContactNumber">Tel No</label>
         <input class="form-control" id="hotelContactNumber" required type="text" >
         <div class="valid-feedback">
             Looks good!
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <label class="form-label" for="petsAllowedOrNot">Pets Allowed Or Not</label>
         <select class="form-select" id="petsAllowedOrNot" required>
             <option disabled selected value=""> </option>
@@ -135,7 +134,7 @@
             Please select a valid state.
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <label class="form-label" for=" cancelCriteria">Cancel Criteria</label>
         <input class="form-control"  id=" cancelCriteria"  required type="text" >
         <div class="valid-feedback">
@@ -148,20 +147,20 @@
         <div class="valid-feedback">
             Looks good!
         </div>
-    </div> <div class="col-md-4">
+    </div> <div class="col-md-2">
     <label class="form-label" for=" hotelFee">Hotel Fee</label>
     <input class="form-control"  id=" hotelFee"  required type="text" >
     <div class="valid-feedback">
         Looks good!
     </div>
-</div> <div class="col-md-4">
+</div> <div class="col-md-3">
     <label class="form-label" for=" email">Email</label>
     <input class="form-control"  id=" email"  required type="text" >
     <div class="valid-feedback">
         Looks good!
     </div>
 </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <label class="form-label" for="image">Image</label>
         <img src="../assets/images/img.png" alt="">
         <input class="mt-2" id="image" name="hotelImage" type="file">
@@ -185,12 +184,12 @@
 
 </form>
 
-<div class="col-12" style="margin-left: 25rem; margin-top: 2rem">
-    <button type="Save" class="btn btn-outline-primary" onclick="save">Save</button>
-    <button type="Update" class="btn btn-outline-success" onclick="update">Update</button>
-    <button type="Delete" class="btn btn-outline-danger" onclick="Delete">Delete</button>
-    <button type="Search" class="btn btn-outline-secondary" onclick="search">Search</button>
-    <button type="Get All" class="btn btn-outline-warning" onclick="getAll">Get All</button>
+<div class="col-12" style="margin-left: 45rem; margin-top: 7rem; margin-bottom: 5rem">
+    <button type="Save" class="btn btn-primary" onclick="save">Save</button>
+    <button type="Update" class="btn btn-success" onclick="update">Update</button>
+    <button type="Delete" class="btn btn-danger" onclick="Delete">Delete</button>
+    <button type="Search" class="btn btn-secondary" onclick="search">Search</button>
+    <button type="Get All" class="btn btn-warning" onclick="getAll">Get All</button>
 </div>
 
 
