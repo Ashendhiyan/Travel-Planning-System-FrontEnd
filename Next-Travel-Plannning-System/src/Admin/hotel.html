@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
+    <!-- Google Maps JavaScript library -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCdGv5cjpA0dMUCSolCf89tl_vgccGvsu0"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+
+</head>
+<body>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+-->
+
+
+
+<form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+        <label class="form-label" for="hotelId">Hotel ID</label>
+        <input class="form-control" id="hotelId" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+
+
+<!--
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p><h1>Google Maps JavaScript API with Places Library Autocomplete Address Field</h1></p>
+                &lt;!&ndash; Autocomplete location search input &ndash;&gt;
+                <div class="form-group">
+                    <label>Location:</label>
+                    <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+
+    <div class="col-md-4">
+        <label class="form-label" for="hotelLocation">Location</label>
+        <input class="form-control" id="hotelLocation" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for="hotelName">Hotel Name</label>
+        <input class="form-control" id="hotelName" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="coordinates">Coordinates</label>
+        <select class="form-select" id="coordinates" required>
+            <option disabled selected value="">................ </option>
+            <option>...</option>
+            <option></option>
+            <option></option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label" for="roomType">RoomType</label>
+        <select class="form-select" id="roomType" required>
+            <option disabled selected value="">AC/ Non-Ac/ Normal </option>
+            <option>AC</option>
+            <option>Non-AC</option>
+            <option>Normal</option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label" for="starRate">Star Rate</label>
+        <select class="form-select" id="starRate" required>
+            <option disabled selected value=""> </option>
+            <option>2 Star</option>
+            <option>3 Star</option>
+            <option>4 Star</option>
+            <option>5 Star</option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label" for="packageCategory">Package Category</label>
+        <select class="form-select" id="packageCategory" required>
+            <option disabled selected value=""> </option>
+            <option>Super Luxury</option>
+            <option>Luxury</option>
+            <option>Mid-level</option>
+            <option>Regular</option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label" for="hotelContactNumber">Tel No</label>
+        <input class="form-control" id="hotelContactNumber" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="petsAllowedOrNot">Pets Allowed Or Not</label>
+        <select class="form-select" id="petsAllowedOrNot" required>
+            <option disabled selected value=""> </option>
+            <option>Allowed</option>
+            <option>Not Allowed</option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for=" cancelCriteria">Cancel Criteria</label>
+        <input class="form-control"  id=" cancelCriteria"  required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for=" remarks">Remarks</label>
+        <input class="form-control"  id=" remarks"  required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div> <div class="col-md-4">
+    <label class="form-label" for=" hotelFee">Hotel Fee</label>
+    <input class="form-control"  id=" hotelFee"  required type="text" >
+    <div class="valid-feedback">
+        Looks good!
+    </div>
+</div> <div class="col-md-4">
+    <label class="form-label" for=" email">Email</label>
+    <input class="form-control"  id=" email"  required type="text" >
+    <div class="valid-feedback">
+        Looks good!
+    </div>
+</div>
+    <div class="col-md-4">
+        <label class="form-label" for="image">Image</label>
+        <img src="../assets/images/img.png" alt="">
+        <input class="mt-2" id="image" name="hotelImage" type="file">
+    </div>
+
+
+<!--    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" id="invalidCheck" required type="checkbox" value="">
+            <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+                You must agree before submitting.
+            </div>
+        </div>
+    </div>-->
+
+
+
+
+</form>
+
+<div class="col-12" style="margin-left: 25rem; margin-top: 2rem">
+    <button type="Save" class="btn btn-outline-primary" onclick="save">Save</button>
+    <button type="Update" class="btn btn-outline-success" onclick="update">Update</button>
+    <button type="Delete" class="btn btn-outline-danger" onclick="Delete">Delete</button>
+    <button type="Search" class="btn btn-outline-secondary" onclick="search">Search</button>
+    <button type="Get All" class="btn btn-outline-warning" onclick="getAll">Get All</button>
+</div>
+
+
+<!--table-->
+<table id="data-table" class="table table-striped"  style="margin-top: 2rem">
+    <thead>
+    <tr>
+        <th>Hotel ID</th>
+        <th>Location</th>
+        <th>Name</th>
+        <th>Coordinates</th>
+        <th>Room Type</th>
+        <th>Star Rate</th>
+        <th>Package Category</th>
+        <th>Tel No</th>
+        <th>Pets</th>
+        <th>Cancel Criteria</th>
+        <th>Remarks</th>
+        <th>Hotel Fee</th>
+        <th>Email</th>
+        <th>Hotel Image</th>
+    </tr>
+    </thead>
+    <tbody id="tBody">
+    <!-- Table data will be added here -->
+    </tbody>
+</table>
+
+<script src="../assets/js/util/manageGuide.js"></script>
+
+
+<script>
+    var searchInput = 'search_input';
+
+    $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+            types: ['geocode'],
+            /*componentRestrictions: {
+             country: "USA"
+            }*/
+        });
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+            var near_place = autocomplete.getPlace();
+        });
+    });
+</script>
+
+</body>
+</html>
