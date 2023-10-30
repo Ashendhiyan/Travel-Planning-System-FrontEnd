@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Guide</title>
+    <title>Hotel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
@@ -218,26 +218,8 @@
     </tbody>
 </table>
 
-<script src="../assets/js/util/manageGuide.js"></script>
+<script src="../assets/js/util/manageHotel.js"></script>
 
-
-<script>
-    var searchInput = 'search_input';
-
-    $(document).ready(function () {
-        var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-            types: ['geocode'],
-            /*componentRestrictions: {
-             country: "USA"
-            }*/
-        });
-
-        google.maps.event.addListener(autocomplete, 'place_changed', function () {
-            var near_place = autocomplete.getPlace();
-        });
-    });
-</script>
 
 </body>
 </html>

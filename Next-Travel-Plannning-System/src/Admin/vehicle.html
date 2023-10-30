@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Guide</title>
+    <title>Vehicle</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
@@ -13,6 +13,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
 
 </head>
@@ -187,6 +190,11 @@
 
 </form>
 
+
+
+
+
+
 <div class="col-12" style="margin-left: 35rem; margin-top: 5rem; margin-bottom: 5rem">
     <button class="btn btn-primary" onclick="save" type="Save">Save</button>
     <button class="btn btn-success" onclick="update" type="Update">Update</button>
@@ -224,26 +232,7 @@
     </tbody>
 </table>
 
-<script src="../assets/js/util/manageGuide.js"></script>
-
-
-<script>
-    var searchInput = 'search_input';
-
-    $(document).ready(function () {
-        var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-            types: ['geocode'],
-            /*componentRestrictions: {
-             country: "USA"
-            }*/
-        });
-
-        google.maps.event.addListener(autocomplete, 'place_changed', function () {
-            var near_place = autocomplete.getPlace();
-        });
-    });
-</script>
+<script src="../assets/js/util/manageVehicle.js"></script>
 
 </body>
 </html>
