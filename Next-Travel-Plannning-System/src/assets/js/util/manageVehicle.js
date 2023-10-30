@@ -72,3 +72,25 @@ function update(){
         }
     })
 }
+
+
+
+function Delete() {
+    let registrationNumber = $('#registrationNumber').val();
+    $.ajax({
+        type: "DELETE",
+        url: "http://localhost:8080/vehicleService/api/v1/vehicle" + registrationNumber,
+        success: (response) => {
+            alert("Delete Success..!")
+            getAll()
+        },
+
+        error: function (error) {
+            alert("Id not found or can't delete Vehicle")
+        }
+    })
+}
+
+
+
+
