@@ -28,6 +28,7 @@ function save(){
         },
         success:(response) => {
             console.log(response)
+            getAll()
         },
         error:(error) => {
             console.log(error)
@@ -66,6 +67,7 @@ function update(){
         },
         success:(response) => {
             console.log(response)
+            getAll()
         },
         error:(error) => {
             console.log(error)
@@ -94,3 +96,26 @@ function Delete() {
 
 
 
+
+function getAll() {
+    $('#tBody').empty();
+    $.ajax({
+        type: "Get",
+        url: "http://localhost:8080/vehicleService/api/v1/vehicle",
+        success: (response) => {
+            response?.map(
+                (data) => {
+                    let row = `<tr><td>${data.registrationNumber}</td><td>${data.vehicleBrand}</td><td>${data.category}</td><td>${data.fuelType}</td><td>${data.isHybrid}</td><td>${data.fuelUsage}</td>
+                                        <td>${data.frontView}</td><td>${data.rearView}</td><td>${data.sideView}</td><td>${data.otherSideView}</td>
+                                        <td>${data.seatCapacity}</td><td>${data.vehicleType}</td><td>${data.transmission}</td><td>${data.driverName}</td>
+                                        <td>${data.driverNumber}</td><td>${data.licenseFront}</td><td>${data.licenseRear}</td></tr>`;
+                    $('#tBody').append(row);
+                }
+            )
+        },
+
+        error: function (error) {
+            alert("Vehicle Not Found..")
+        }
+    })
+}
