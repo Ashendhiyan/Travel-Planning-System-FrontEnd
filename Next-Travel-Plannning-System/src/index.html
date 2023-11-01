@@ -5,7 +5,13 @@
     <title>Next Travel</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>-->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+
+
+
 </head>
 <body>
 
@@ -20,8 +26,8 @@
     <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#packages">Packages</a>
+        <a href="#Destination">Destination</a>
         <a href="#services">Services</a>
-        <a href="#review">review</a>
         <a href="#contact">Contact</a>
 
     </nav>
@@ -40,19 +46,31 @@
 <!--Header Ending-->
 
 
+
+
 <!--Login form container-->
 <div class="login-form-container">
+
+
 
     <i class="fas fa-times" id="form-close"></i>
     <form action="">
         <h3>login</h3>
+
+
+        <label for="Guide" class="form-label">Choose Your Role</label>
+        <select class="form-select form-select-sm box" aria-label="Small select example" id="Guide">
+            <option selected>Admin</option>
+            <option value="1">Registered User</option>
+            <option value="1">User</option>
+        </select>
         <input type="email"class="box"placeholder="Enter your Email">
         <input type="password"class="box"placeholder="Enter your Password">
         <input type="submit"value="login now" class="btn">
         <input type="checkbox"id="remember">
         <label for="remember">remember me</label>
         <p>forget password ? <a href="#">click here</a></p>
-        <p>don't have a account? <a href="#">Register now</a></p>
+        <p>don't have a account? <a href="">Register now</a></p>
     </form>
 
 </div>
@@ -64,6 +82,32 @@
 
     <form action="#">
         <h3 class="title">Sign Up</h3>
+
+        <div class="profile-pic-wrapper">
+            <div class="pic-holder">
+                <!-- uploaded pic shown here -->
+                <img id="profilePic" class="pic"
+                     src="https://static.vecteezy.com/system/resources/previews/018/765/757/original/user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg" alt="profilePic" width="100px">
+                <Input class="uploadProfileInput" type="file" name="reg_User_ProfilePhoto" id="regUserProfilePhoto"
+                       accept="image/*" style="opacity: 0;"></Input>
+                <label for="regUserProfilePhoto" class="upload-file-block">
+                    <div class="text-center">
+                        <div class="mb-2" id="camera">
+                            <i class="fa fa-camera fa-2x"></i>
+                        </div>
+                        <div class="text-uppercase" >
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <!--<div class="user-img">
+            <img src="assets/images/profile.jpeg" width="100" id="photo">
+            <input type="file" id="file">
+            <label for="file" id="uploadBtn"><i class="fa fa-camera"></i></label>
+        </div>-->
         <div class="user-details">
             <div class="input-box">
                 <span class="details">Username</span>
@@ -125,7 +169,7 @@
 
 <!--package section starts-->
 
-<section class="packages" id="packages">
+<!--<section class="packages" id="packages">
 
     <h1 class="heading">
         <span>p</span>
@@ -185,12 +229,278 @@
         </div>
     </div>
 
+</section>-->
+
+<section id="packages"  class="packages" style="margin-top: 40px; margin-bottom: 90px">
+<div class="container">
+    <div class="row sm-m-25px-b m-35px-b">
+        <div class="col-md-12">
+            <div class="section-title">
+
+
+                <h1 class="heading">
+                    <span>p</span>
+                    <span>a</span>
+                    <span>c</span>
+                    <span>k</span>
+                    <span>a</span>
+                    <span>g</span>
+                    <span>e</span>
+                    <span>s</span>
+                </h1>
+
+                <div class="container">
+                            <span class="row justify-content-md-center mt-5">
+                                        <div class="col-3">
+                                             <select class="form-select form-select-lg mb-3" id="packageName" name="package_Name">
+                                                <option value="">Packages</option>
+                                                 <!--option value="Regular">Regular</option>
+                                                 <option value="Mid-Level">Mid-Level</option>
+                                                 <option value="Luxury">Luxury</option>
+                                                 <option value="SuperLuxury">Super Luxury</option>-->
+                                             </select>
+                                        </div>
+                                    </span>
+                    <div class="row mt-5">
+                        <div class="col-lg-6 m-15px-tb justify-content-md-center" style="margin-left: -8rem">
+
+                                    <span class="row" style="margin-bottom: 5rem">
+                                         <div class="col-4">
+                                              <select class="form-select form-select-lg mb-3" id="filterstarRate" name="filter_start_Rate">
+                                                 <option value="">Star Rate</option>
+                                                  <!--option value="DIESEL">2 Star</option>
+                                                  <option value="PETROL">3 Star</option>-->
+                                             </select>
+                                         </div>
+                                         <div class="col-4">
+                                              <select class="form-select form-select-lg mb-3" id="filterlocation" name="filter_locations">
+                                                 <option value="">Location</option>
+                                                  <option value="KandyandUpcountry"> Kandy and Upcountry</option>
+                                                 <option value="EasternCoast">Eastern Coast</option>
+                                                 <option value="CapitalColombo">Capital Colombo</option>
+                                                 <option value="WesternCoast">Western Coast</option>
+                                                 <option value="NorthPeninsula">North Peninsula</option>
+                                                 <option value="DownSouth">Down South</option>
+                                                 <option value="Sigiriya">Sigiriya and Dambulla</option>
+                                                 <option value="Anuradhapura">Anuradhapura and Polonnaruwa</option>
+                                                 <option value="Matale">Matale</option>
+                                             </select>
+                                         </div>
+                                        <div class="col-3" >
+                                              <button type="button" class="btn" style="" id="searchHotel"
+                                                      name="search_Hotel">Search</button>
+                                        </div>
+                                    </span>
+                            <br>
+                            <div id="vehicleSection"></div>
+                            <div class="card" style="width: 500px;">
+                                <div class="row no-gutters">
+                                    <div class="col-sm-6">
+                                        <img class="card-img-top"
+                                             src="https://ak-d.tripcdn.com/images/022691200082a1y3nCFAC_R_640_440_R5_D.webp"
+                                             alt="Card image cap">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card-body">
+                                            <h4 class="card-title" style="margin-top: 15px">Kandy City
+                                                Hotel</h4>
+                                            <small> Wadduwa</small><br>
+                                            <small>2 Star</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-15px-tb justify-content-md-center" style="margin-left: 8rem">
+                                    <span class="row" style="margin-bottom: 5rem">
+                                         <div class="col-4">
+                                              <select class="form-select form-select-lg mb-3" id="filterpassengers"
+                                                      name="filter_Passengers">
+                                                 <option value="">No of passengers</option>
+                                                  <option value="passengers4">4</option>
+                                                 <option value="passengers10">10</option>
+                                                 <option value="passengers12">12</option>
+                                             </select>
+                                         </div>
+                                         <div class="col-4">
+                                              <select class="form-select form-select-lg mb-3" id="filterTransmission"
+                                                      name="filter_Transmission">
+                                                      <option value="">Transmission type</option>
+                                                  <option value="Auto">Auto Transmission</option>
+                                                 <option value="Manual">Manual Transmission</option>
+                                             </select>
+                                         </div>
+                                         <div class="col-3">
+                                              <select class="form-select form-select-lg mb-3" id="filterFueltype" name="filter_Fueltype">
+                                                  <option value="">Fuel type</option>
+                                                  <option value="passengers4">Diesel</option>
+                                                 <option value="passengers5">Petrol</option>
+                                             </select>
+                                         </div>
+                                         <div class="col-3 ">
+                                               <button type="button" class="btn btn-dark " style="" id="searchVehicle"
+                                                       name="search_Vehicle">Search</button>
+                                         </div>
+                                    </span>
+                            <br>
+                            <div id="hotelSection"></div>
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-sm-6">
+                                        <img class="card-img-top"
+                                             src="https://cdn2.rcstatic.com/images/car_images/web/nissan/kicks_lrg.jpg"
+                                             alt="Card image cap">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card-body" >
+                                            <h4 class="card-title" style="margin-top: 15px">Nissan Kicks</h4>
+                                            <small>4 seats</small><br>
+                                            <small>Petrol </small><br>
+                                            <small>Auto Transmission</small><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 
 
 
 
 <!--package section ends-->
+
+
+<!--Destination Page-->
+<!--<section id="destinationPage" style="margin-top: 20px">
+    <div class="container">
+        <div class="row sm-m-25px-b m-35px-b">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h1 class="mb-0 pageTile" style="font-weight: 150">Explore Place</h1>
+                    <br>
+                </div>
+                <div class="card-columns">
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/ed/f4/a5/edf4a5a8cfac65cfd210b4995f873e4d.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="" class="card-title  title">
+                                Kandy and Upcountry
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/3a/2e/e5/3a2ee55019a557ebf6dc50cce02882f5.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                Eastern Coast
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/d8/92/31/d89231defe855339e682a23f92143382.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                Anuradhapura and Polonnaruwa
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/7a/7e/1e/7a7e1e7a6a07cc1e1b471a9fe54ead2e.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                Capital Colombo
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/f1/06/7c/f1067c0e593b16d0b001af667f1d8b9b.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                Western Coast
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/51/27/53/5127537e8b4540e39d131b155a35b1a1.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                North Peninsula
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/3b/cf/ba/3bcfbacecb0e60c762de7fe259032462.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                Down South
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/45/18/73/45187340aef54276298070214fc2dfa0.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                Sigiriya and Dambulla
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="card placeCard">
+                        <a title="Kandy and Upcountry" href="#" class="card-title">
+                            <img class="card-img-top"
+                                 src="https://i.pinimg.com/564x/8b/b7/ad/8bb7ad957a9bc61a96893027476607f3.jpg"
+                                 alt="Card image cap">
+                        </a>
+                        <p class="placeTile">
+                            <a href="#" class="card-title  title">
+                                Matale
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
 
 
 
@@ -252,6 +562,50 @@
     </div>
 </section>
 <!--Service section End-->
+
+
+
+<!--contact us section-->
+
+<section id="ContactPage" style="margin-top: 20px;">
+    <div class="container">
+        <div class="row sm-m-25px-b m-35px-b">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h1 class="mb-0 pageTile" style="font-weight: 150;">GET IN TOUCH </h1>
+                    <br>
+                    <div class="row row-14 gutters-14" style="margin-top: 5px">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom01">You Name</label>
+                                    <input type="text" class="form-control" id="validationCustom01"
+                                           placeholder="You Name" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom02">Email</label>
+                                    <input type="email" class="form-control" id="validationCustom02"
+                                           placeholder="Email" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">Number</label>
+                                    <input type="text" name="Phone" class="form-control" id="validationCustom03"
+                                           placeholder="Phone Number" required>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom04">Message</label>
+                                    <textarea type="text" class="form-control" id="validationCustom04"
+                                              placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-warning">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
+    <!-- Google Maps JavaScript library -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCdGv5cjpA0dMUCSolCf89tl_vgccGvsu0"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+
+
+</head>
+<body>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+-->
+
+
+
+<form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-2">
+        <label class="form-label" for="hotelId">User ID</label>
+        <input class="form-control" id="hotelId" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label" for="hotelLocation">Name</label>
+        <input class="form-control" id="hotelLocation" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="hotelName">NIC</label>
+        <input class="form-control" id="hotelName" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label" for="nicImage">NIC</label>
+        <img src="../assets/images/img.png" alt="">
+        <input class="mt-2" id="nicImage" name="hotelImage" type="file">
+    </div>
+
+    <div class="col-md-2">
+        <label class="form-label" for="hotelContactNumber">Age</label>
+        <input class="form-control" id="hotelContactNumber" required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <label class="form-label" for="roomType">Gender</label>
+        <select class="form-select" id="roomType" required>
+            <option disabled selected value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for=" cancelCriteria">Email</label>
+        <input class="form-control"  id=" cancelCriteria"  required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for=" remarks">Tel No</label>
+        <input class="form-control"  id=" remarks"  required type="text" >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div> <div class="col-md-2">
+    <label class="form-label" for=" hotelFee">Address</label>
+    <input class="form-control"  id=" hotelFee"  required type="text" >
+    <div class="valid-feedback">
+        Looks good!
+    </div>
+</div>
+</form>
+
+<div class="col-12" style="margin-left: 45rem; margin-top: 7rem; margin-bottom: 5rem">
+    <button type="Save" class="btn btn-primary" onclick="save">Save</button>
+    <button type="Update" class="btn btn-success" onclick="update">Update</button>
+    <button type="Delete" class="btn btn-danger" onclick="Delete">Delete</button>
+    <button type="Search" class="btn btn-secondary" onclick="search">Search</button>
+    <button type="Get All" class="btn btn-warning" onclick="getAll">Get All</button>
+</div>
+
+
+<!--table-->
+<table id="data-table" class="table table-striped"  style="margin-top: 2rem">
+    <thead>
+    <tr>
+        <th scope="col">User ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">NIC</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Contact Number</th>
+    </tr>
+    </thead>
+    <tbody id="tBody">
+    <!-- Table data will be added here -->
+    </tbody>
+</table>
+
+<script src="../assets/js/util/manageHotel.js"></script>
+
+
+</body>
+</html>

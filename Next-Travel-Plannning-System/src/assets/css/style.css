@@ -190,6 +190,126 @@ header .search-bar-container label:hover{
     cursor: pointer;
 }
 
+
+/*-------signup container------------*/
+
+.signup-container{
+    position: fixed;
+    top: -120%; left: 0;
+    z-index: 10000 ;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-container .title{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+.signup-container.active{
+    top: 0;
+}
+.signup-container form{
+    position: relative;
+    margin-top: 50px;
+//margin: 5px;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #ffff;
+    width: 70rem;
+}
+.signup-container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#profilePic{
+    position: relative;
+    left: 130px;
+}
+.pic-holder{
+    position: relative;
+    left: 150px;
+}
+#camera{
+    position: relative;
+    right: 128px;
+    top: 45px;
+}
+form .user-details .input-box{
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box input{
+    height: 30px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.user-details .input-box{
+    margin-top: 15px;
+}
+
+form .user-details .details{
+    font-size: 20px;
+}
+.signup-container form .button input{
+    margin-top: 100px;
+    height: 40px;
+    background: #ffa500;
+    font-size: 20px ;
+    border-color: #ffa500;
+}
+form .button input{
+    display: block;
+    width: 100%;
+
+}
+.signup-container #signUpForm-close{
+    position: absolute;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 300px; right: 0;
+    justify-content: center;
+    align-items: center;
+}
+#photo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#file{
+    display: none;
+}
+
+#uploadBtn{
+    position: relative;
+    left: 70px; bottom: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #ffff;
+    background-color: rgba(75, 185, 185, 0.8);
+    box-shadow: 2px 4px 4px rgb(0,0,0,0.644);
+}
+
+
+
 #menu-bar{
     color: #fff;
     border: .1rem solid #fff;
@@ -224,10 +344,10 @@ header .search-bar-container label:hover{
     text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
 }
 
-.home .content p{
-    font-size: 2.5rem;
-    color: #fff;
-    padding: .5rem 0;
+.home .content{
+    text-align: center;
+    position: relative;
+    /*left:10px ;*/
 }
 
 .home .video-container video{
@@ -235,8 +355,8 @@ header .search-bar-container label:hover{
     top: 0; left: -1rem;
     z-index: -1;
     height: 100%;
-    width: 110%;
-    object-fit: cover;
+    width: 101%;
+    object-fit:cover;
 }
 
 .home .controls{
@@ -357,7 +477,7 @@ header .search-bar-container label:hover{
     border: 1rem solid #fff;
     border-radius: .7rem;
     flex: 1 1 24rem;
-    height: 32rem;
+    height: 37rem;
     position: relative;
 }
 
@@ -399,6 +519,21 @@ header .search-bar-container label:hover{
 
 
 
+
+/* destination*/
+
+
+#destinationPage{
+    width: 100%;
+}
+
+/* contact */
+
+#ContactPage{
+    width: 100%;
+}
+
+
 /* footer */
 
 .footer{
@@ -421,87 +556,6 @@ header .search-bar-container label:hover{
 .footer .credit span{
     color: var(--orange);
 }
-
-
-
-
-/* sign up*/
-
-
-.signup-container{
-    position: fixed;
-    top: -120%; left: 0;
-    z-index: 10000 ;
-    min-height: 100vh;
-    width: 100%;
-    background: rgba(0,0,0,.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.signup-container .title{
-    font-size: 3rem;
-    color: #444;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 1rem 0;
-}
-.signup-container.active{
-    top: 0;
-}
-.signup-container form{
-    position: relative;
-    margin-top: 50px;
-//margin: 5px;
-    padding: 1.5rem 2rem;
-    border-radius: .5rem;
-    background: #ffff;
-    width: 70rem;
-}
-.signup-container form .user-details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-form .user-details .input-box{
-    width: calc(100% / 2 - 20px);
-}
-.user-details .input-box input{
-    height: 30px;
-    width: 100%;
-    font-size: 16px;
-}
-
-.user-details .input-box{
-    margin-top: 15px;
-}
-
-form .user-details .details{
-    font-size: 20px;
-}
-.signup-container form .button input{
-    margin-top: 120px;
-    height: 40px;
-    background: #ffa500;
-    font-size: 20px ;
-    border-color: #ffa500;
-}
-form .button input{
-    display: block;
-    width: 100%;
-
-}
-.signup-container #signUpForm-close{
-    position: absolute;
-    top: 2rem; right: 3rem;
-    font-size: 5rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-
-
-
 
 
 
