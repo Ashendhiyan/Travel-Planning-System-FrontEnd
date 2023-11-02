@@ -1,0 +1,22 @@
+#img{
+    position: relative;
+    right: 150px;
+    bottom: 20px;
+}
+#upload{
+    position: relative;
+    right: 90px;
+    top: 130px;
+}
+#profilePic{
+    position: relative;
+    left: 400px;
+}
+#update{
+    position: relative;
+    left: 500px;
+}
+#profile{
+    border-radius: 5px;
+    background: #d9d5c5;
+}
