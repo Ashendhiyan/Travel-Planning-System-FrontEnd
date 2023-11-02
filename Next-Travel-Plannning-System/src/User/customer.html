@@ -18,54 +18,37 @@
     <div class="col-md-4">
         <label class="form-label" for="customerId">Customer ID</label>
         <input class="form-control" id="customerId" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="customerIdError"></small></p>
     </div>
     <div class="col-md-4">
         <label class="form-label" for="name">Name</label>
         <input class="form-control" id="name" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="customerNameError"></small></p>
     </div>
     <div class="col-md-4">
         <label class="form-label" for="email">Email</label>
         <input class="form-control"  id="email" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="customerEmailError"></small></p>
     </div>
     <div class="col-md-4">
         <label class="form-label" for="address">Address</label>
         <input class="form-control" id="address" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="customerAddressError"></small></p>
     </div>
     <div class="col-md-4">
         <label class="form-label" for="nic">NIC</label>
         <input class="form-control" id="nic" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="customerNicError"></small></p>
     </div>
     <div class="col-md-4">
         <label class="form-label" for="username">Username</label>
-        <div class="input-group has-validation">
-            <input aria-describedby="inputGroupPrepend" class="form-control" id="username" required
-                   type="text">
-            <div class="invalid-feedback">
-                Please choose a username.
-            </div>
-        </div>
+        <input class="form-control" id="username" required type="text">
+        <p><small class="text-danger" id="customerUserNameError"></small></p>
     </div>
     <div class="col-md-4">
         <label class="form-label" for="password">Password</label>
         <input class="form-control"  id="password"  required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="customerPassWordError"></small></p>
     </div>
  <div class="col-md-4" >
         <label class="form-label" for="profilePic">Profile Picture</label>
@@ -97,7 +80,6 @@
         <th>NIC</th>
         <th>Username</th>
         <th>Password</th>
-        <th>Profile Picture</th>
     </tr>
     </thead>
     <tbody id="tBody">
