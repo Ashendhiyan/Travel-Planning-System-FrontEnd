@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Hotel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
     <!-- Google Maps JavaScript library -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCdGv5cjpA0dMUCSolCf89tl_vgccGvsu0"></script>
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 
 
 </head>
@@ -21,54 +20,54 @@
 -->
 
 
-
 <form class="row g-3 needs-validation" novalidate>
     <div class="col-md-2">
         <label class="form-label" for="hotelId">Hotel ID</label>
-        <input class="form-control" id="hotelId" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <input class="form-control" id="hotelId" required type="text">
+        <p><small class="text-danger" id="HotelIdError"></small></p>
     </div>
 
-
-<!--
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <p><h1>Google Maps JavaScript API with Places Library Autocomplete Address Field</h1></p>
-                &lt;!&ndash; Autocomplete location search input &ndash;&gt;
-                <div class="form-group">
-                    <label>Location:</label>
-                    <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
-                </div>
-            </div>
-        </div>
-    </div>
--->
-
-
-    <div class="col-md-3">
+    <div class="col-md-2">
         <label class="form-label" for="hotelLocation">Location</label>
-        <input class="form-control" id="hotelLocation" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
+        <select class="form-select" id="hotelLocation" required>
+            <option disabled selected value="">Select Location</option>
+            <option value="Kandy and Upcountry">Kandy and Upcountry</option>
+            <option value="Eastern Coast">Eastern Coast</option>
+            <option value="Eastern Coast">Anuradhapura</option>
+            <option value="Polonnaruwa">Polonnaruwa</option>
+            <option value="Capital Colomb">Capital Colombo</option>
+            <option value="Western Coas">Western Coast</option>
+            <option value="North Peninsula">North Peninsula</option>
+            <option value="Down South">Down South</option>
+            <option value="Sigiriya">Sigiriya</option>
+            <option value="Dambulla">Dambulla</option>
+            <option value="Matale">Matale</option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
         </div>
     </div>
+
     <div class="col-md-3">
         <label class="form-label" for="hotelName">Hotel Name</label>
-        <input class="form-control" id="hotelName" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <input class="form-control" id="hotelName" required type="text">
+        <p><small class="text-danger" id="HotelNameError"></small></p>
     </div>
     <div class="col-md-2">
         <label class="form-label" for="coordinates">Coordinates</label>
         <select class="form-select" id="coordinates" required>
-            <option disabled selected value="">................ </option>
-            <option>...</option>
-            <option></option>
-            <option></option>
+            <option disabled selected value="">Select Coordinates</option>
+            <option value="7.2996° N, 80.6369° E">7.2996° N, 80.6369° E</option>
+            <option value="07°55 N 81°30 E">07°55 N 81°30 E</option>
+            <option value="8.3114°N, 80.4037°E">8.3114°N, 80.4037°E</option>
+            <option value="7.9403°N, 81.0188°E">7.9403°N, 81.0188°E</option>
+            <option value="6.9271° N, 79.8612° E">6.9271° N, 79.8612° E</option>
+            <option value="6.9016° N, 80.0088° E">6.9016° N, 80.0088° E</option>
+            <option value="8.8855° N, 80.2767° E">8.8855° N, 80.2767° E</option>
+            <option value="6°10′N 80°45′E">6°10′N 80°45′E</option>
+            <option value="7.9570° N, 80.7603° E">7.9570° N, 80.7603° E</option>
+            <option value="7.8742° N, 80.6511° E">7.8742° N, 80.6511° E</option>
+            <option value="7.4675° N, 80.6234° E">7.4675° N, 80.6234° E</option>
         </select>
         <div class="invalid-feedback">
             Please select a valid state.
@@ -78,7 +77,7 @@
     <div class="col-md-2">
         <label class="form-label" for="roomType">RoomType</label>
         <select class="form-select" id="roomType" required>
-            <option disabled selected value="">AC/ Non-Ac/ Normal </option>
+            <option disabled selected value="">AC/ Non-Ac/ Normal</option>
             <option>AC</option>
             <option>Non-AC</option>
             <option>Normal</option>
@@ -91,7 +90,7 @@
     <div class="col-md-2">
         <label class="form-label" for="starRate">Star Rate</label>
         <select class="form-select" id="starRate" required>
-            <option disabled selected value=""> </option>
+            <option disabled selected value=""></option>
             <option>2 Star</option>
             <option>3 Star</option>
             <option>4 Star</option>
@@ -105,7 +104,7 @@
     <div class="col-md-3">
         <label class="form-label" for="packageCategory">Package Category</label>
         <select class="form-select" id="packageCategory" required>
-            <option disabled selected value=""> </option>
+            <option disabled selected value=""></option>
             <option>Super Luxury</option>
             <option>Luxury</option>
             <option>Mid-level</option>
@@ -118,15 +117,13 @@
 
     <div class="col-md-2">
         <label class="form-label" for="hotelContactNumber">Tel No</label>
-        <input class="form-control" id="hotelContactNumber" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <input class="form-control" id="hotelContactNumber" required type="text">
+        <p><small class="text-danger" id="HotelTelNoError"></small></p>
     </div>
     <div class="col-md-2">
         <label class="form-label" for="petsAllowedOrNot">Pets Allowed Or Not</label>
         <select class="form-select" id="petsAllowedOrNot" required>
-            <option disabled selected value=""> </option>
+            <option disabled selected value=""></option>
             <option>Allowed</option>
             <option>Not Allowed</option>
         </select>
@@ -135,66 +132,41 @@
         </div>
     </div>
     <div class="col-md-3">
-        <label class="form-label" for=" cancelCriteria">Cancel Criteria</label>
-        <input class="form-control"  id=" cancelCriteria"  required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="cancelCriteria">Cancel Criteria</label>
+        <input class="form-control" id="cancelCriteria" required type="text">
+        <p><small class="text-danger" id="HotelCancelError"></small></p>
     </div>
-    <div class="col-md-4">
-        <label class="form-label" for=" remarks">Remarks</label>
-        <input class="form-control"  id=" remarks"  required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div> <div class="col-md-2">
-    <label class="form-label" for=" hotelFee">Hotel Fee</label>
-    <input class="form-control"  id=" hotelFee"  required type="text" >
-    <div class="valid-feedback">
-        Looks good!
+
     </div>
-</div> <div class="col-md-3">
-    <label class="form-label" for=" email">Email</label>
-    <input class="form-control"  id=" email"  required type="text" >
-    <div class="valid-feedback">
-        Looks good!
+    <div class="col-md-2">
+        <label class="form-label" for="hotelFee">Hotel Fee</label>
+        <input class="form-control" id="hotelFee" required type="text">
+        <p><small class="text-danger" id="HotelFeeError"></small></p>
     </div>
-</div>
+    <div class="col-md-3">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" id="email" required type="text">
+        <p><small class="text-danger" id="HotelEmailError"></small></p>
+    </div>
     <div class="col-md-3">
         <label class="form-label" for="image">Image</label>
-        <img src="../assets/images/img.png" alt="">
+        <img alt="" src="../assets/images/img.png">
         <input class="mt-2" id="image" name="hotelImage" type="file">
     </div>
-
-
-<!--    <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input" id="invalidCheck" required type="checkbox" value="">
-            <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-                You must agree before submitting.
-            </div>
-        </div>
-    </div>-->
-
-
-
 
 </form>
 
 <div class="col-12" style="margin-left: 45rem; margin-top: 7rem; margin-bottom: 5rem">
-    <button type="Save" class="btn btn-primary" onclick="save">Save</button>
-    <button type="Update" class="btn btn-success" onclick="update">Update</button>
-    <button type="Delete" class="btn btn-danger" onclick="Delete">Delete</button>
-    <button type="Search" class="btn btn-secondary" onclick="search">Search</button>
-    <button type="Get All" class="btn btn-warning" onclick="getAll">Get All</button>
+    <button class="btn btn-primary" onclick="save" type="Save">Save</button>
+    <button class="btn btn-success" onclick="update" type="Update">Update</button>
+    <button class="btn btn-danger" onclick="Delete" type="Delete">Delete</button>
+    <button class="btn btn-secondary" onclick="search" type="Search">Search</button>
+    <button class="btn btn-warning" onclick="getAll" type="Get All">Get All</button>
 </div>
 
 
 <!--table-->
-<table id="data-table" class="table table-striped"  style="margin-top: 2rem">
+<table class="table table-striped" id="data-table" style="margin-top: 2rem">
     <thead>
     <tr>
         <th>Hotel ID</th>
@@ -207,10 +179,8 @@
         <th>Tel No</th>
         <th>Pets</th>
         <th>Cancel Criteria</th>
-        <th>Remarks</th>
-        <th>Hotel Fee</th>
+        <th>Fee</th>
         <th>Email</th>
-        <th>Hotel Image</th>
     </tr>
     </thead>
     <tbody id="tBody">
