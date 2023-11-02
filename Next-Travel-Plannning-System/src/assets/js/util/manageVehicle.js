@@ -6,17 +6,17 @@ function save(){
     let fuelType = $('#fuelType').val();
     let isHybrid = $('#isHybrid').val();
     let fuelUsage = $('#fuelUsage').val();
-    let frontView = $('#frontView').val();
-    let rearView = $('#rearView').val();
-    let sideView = $('#sideView').val();
-    let otherSideView = $('#otherSideView').val();
+    let frontView = $('#frontView')[0].files[0];
+    let rearView = $('#rearView')[0].files[0];
+    let sideView = $('#sideView')[0].files[0];
+    let otherSideView = $('#otherSideView')[0].files[0];
     let seatCapacity = $('#seatCapacity').val();
     let vehicleType = $('#vehicleType').val();
     let transmission = $('#transmission').val();
     let driverName = $('#driverName').val();
     let driverNumber = $('#driverName').val();
-    let licenseFront = $('#licenseFront').val();
-    let licenseRear = $('#licenseRear').val();
+    let licenseFront = $('#licenseFront')[0].files[0];
+    let licenseRear = $('#licenseRear')[0].files[0];
 
     $.ajax({
         type:"POST",
@@ -45,17 +45,17 @@ function update(){
     let fuelType = $('#fuelType').val();
     let isHybrid = $('#isHybrid').val();
     let fuelUsage = $('#fuelUsage').val();
-    let frontView = $('#frontView').val();
-    let rearView = $('#rearView').val();
-    let sideView = $('#sideView').val();
-    let otherSideView = $('#otherSideView').val();
+    let frontView = $('#frontView')[0].files[0];
+    let rearView = $('#rearView')[0].files[0];
+    let sideView = $('#sideView')[0].files[0];
+    let otherSideView = $('#otherSideView')[0].files[0];
     let seatCapacity = $('#seatCapacity').val();
     let vehicleType = $('#vehicleType').val();
     let transmission = $('#transmission').val();
     let driverName = $('#driverName').val();
     let driverNumber = $('#driverName').val();
-    let licenseFront = $('#licenseFront').val();
-    let licenseRear = $('#licenseRear').val();
+    let licenseFront = $('#licenseFront')[0].files[0];
+    let licenseRear = $('#licenseRear')[0].files[0];
 
     $.ajax({
         type:"PUT",

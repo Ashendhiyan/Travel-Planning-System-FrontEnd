@@ -8,7 +8,7 @@ function save() {
     let nic = $('#nic').val();
     let username = $('#username').val();
     let password = $('#password').val();
-    let profilePic = $('#profilePic').val();
+    let profilePic = $('#profilePic')[0].files[0];
 
     $.ajax({
         type: "POST",
@@ -37,7 +37,7 @@ function update() {
     let nic = $('#nic').val();
     let username = $('#username').val();
     let password = $('#password').val();
-    let profilePic = $('#profilePic').val();
+    let profilePic = $('#profilePic')[0].files[0];
 
 
     $.ajax({

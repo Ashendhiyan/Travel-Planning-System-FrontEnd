@@ -15,24 +15,18 @@
 <form class="row g-3 needs-validation" enctype="multipart/form-data" novalidate>
     <div class="col-md-3">
         <label class="form-label" for="guideId">Guide ID</label>
-        <input class="form-control" id="guideId" required type="text">
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <input class="form-control" id="guideId" required type="text" value="">
+        <p><small class="text-danger" id="idError"></small></p>
     </div>
     <div class="col-md-3">
         <label class="form-label" for="guideName">Guide Name</label>
         <input class="form-control" id="guideName" required type="text">
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="nameError"></small></p>
     </div>
     <div class="col-md-3">
         <label class="form-label" for="address">Address</label>
         <input class="form-control" id="address" required type="text">
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="addressError"></small></p>
     </div>
     <div class="col-md-3">
         <label class="form-label" for="gender">Gender</label>
@@ -49,23 +43,17 @@
     <div class="col-md-3">
         <label class="form-label" for="number">Tel No</label>
         <input class="form-control" id="number" required type="text">
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="telNoError"></small></p>
     </div>
     <div class="col-md-3">
         <label class="form-label" for="experience">Experience</label>
         <input class="form-control" id="experience" required type="text">
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <p><small class="text-danger" id="ExpError"></small></p>
     </div>
     <div class="col-md-3">
-        <label class="form-label" for=" manDayValue"> Man Day Value</label>
-        <input class="form-control" id=" manDayValue" required type="text">
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="manDayValue"> Man Day Value</label>
+        <input class="form-control" id="manDayValue" required type="text">
+        <p><small class="text-danger" id="manDayValueError"></small></p>
     </div>
     <div class="col-md-3">
         <label class="form-label" for="guideImage">Guide Picture</label>
@@ -78,18 +66,6 @@
         <input class="mt-2" id="nicImage" name="customerProfilePic" type="file">
     </div>
 
-
-    <!--    <div class="col-12">
-            <div class="form-check">
-                <input class="form-check-input" id="invalidCheck" required type="checkbox" value="">
-                <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                    You must agree before submitting.
-                </div>
-            </div>
-        </div>-->
 
 
 </form>
@@ -114,8 +90,6 @@
         <th>Tel No</th>
         <th>Experience</th>
         <th>Man Day Value</th>
-        <th>Guide Image</th>
-        <th>NIC Image</th>
     </tr>
     </thead>
     <tbody id="tBody">

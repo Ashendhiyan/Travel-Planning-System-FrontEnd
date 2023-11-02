@@ -15,7 +15,7 @@ function save() {
     let remarks = $('#remarks').val();
     let hotelFee = $('#hotelFee').val();
     let email = $('#email').val();
-    let image = $('#image').val();
+    let image = $('#image')[0].files[0];
 
 
     $.ajax({
@@ -53,7 +53,7 @@ function update() {
     let remarks = $('#remarks').val();
     let hotelFee = $('#hotelFee').val();
     let email = $('#email').val();
-    let image = $('#image').val();
+    let image = $('#image')[0].files[0];
 
     $.ajax({
         type: "PUT",
