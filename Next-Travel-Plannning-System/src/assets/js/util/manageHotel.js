@@ -233,7 +233,6 @@ function search() {
             $('#cancelCriteria').val(response.cancelCriteria);
             $('#hotelFee').val(response.hotelFee);
             $('#email').val(response.email);
-            $('#image').val(response.image);
         },
 
         error: function (error) {
@@ -249,8 +248,7 @@ function search() {
             $('#cancelCriteria').val(" ");
             $('#hotelFee').val("");
             $('#email').val(" ");
-            $('#image').val(" ");
-            alert("Guide Not Found..!");
+            alert("Hotel Not Found..!");
         }
     })
 }

@@ -219,7 +219,6 @@ function search() {
             $('#nic').val(response.nic);
             $('#username').val(response.username);
             $('#password').val(response.password);
-            $('#profilePic').val(response.profilePic);
         },
         error: (error) => {
             console.log(error)
@@ -230,7 +229,6 @@ function search() {
             $('#nic').val("");
             $('#username').val("");
             $('#password').val("");
-            $('#profilePic').val("");
             alert("Customer Not Found..!");
         }
     })

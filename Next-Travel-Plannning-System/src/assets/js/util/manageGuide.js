@@ -212,8 +212,6 @@ function search() {
             $('#number').val(response.number);
             $('#experience').val(response.experience);
             $('#manDayValue').val(response.manDayValue);
-            $('#guideImage').val(response.guideImage);
-            $('#nicImage').val(response.nicImage);
         },
 
         error: function (error) {
@@ -225,8 +223,6 @@ function search() {
             $('#number').val(" ");
             $('#experience').val(" ");
             $('#manDayValue').val(" ");
-            $('#guideImage').val(" ");
-            $('#nicImage').val(" ");
             alert("Guide Not Found..!");
         }
     })
