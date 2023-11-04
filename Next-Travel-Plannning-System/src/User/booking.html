@@ -1,230 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Booking form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <link rel="stylesheet" href="../assets/css/booking.css">
+    <link rel="stylesheet" href="../assets/lib/bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <link href="../assets/css/admin.css" rel="stylesheet">
+
 </head>
-<style>
-    #menu{
-        height: 100vh;
-        background: #d5dada;
-    }
-    .container{
-        margin-top: 15px;
-        border-radius: 5px;
-        background: #edeff1;
-    }
-    .container span{
-        color: #1c9a05;
-        font-weight: bolder;
-    }
-    #img{
-        position: relative;
-        right: 150px;
-        bottom: 20px;
-    }
-</style>
+
 <body>
-<header>
-    <nav class="navbar bg-body-secondary">
-        <div class="container-fluid">
-    <span class="navbar-text">
-      NEXT Travel
-    </span>
-        </div>
-    </nav>
-</header>
-<div class="container-fluid ">
-  <!--  <div class="row">
-        <div class="col-2" id="menu">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" style="margin-top: 35px">Profile</button>
-                <button class="btn btn-secondary" type="button">Booking</button>
-                <button class="btn btn-secondary" type="button">Logout</button>
-            </div>
-        </div>
--->
-        <div class="col">
-            <div class="row">
-                <div id="" class="container"><span>Reservation Details</span>
-                    <div class="row " style="margin-top: 15px">
-                        <div class="col-3">
-                            <label for="txtBookId" class="form-label">Booking Id</label>
-                            <input type="text" class="form-control" id="txtBookId" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label for="txtUserId" class="form-label">User ID</label>
-                            <input type="text" class="form-control" id="txtUserId" placeholder="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="txtPackage" class="form-label">Package</label>
-                            <input type="text" class="form-control" id="txtPackage" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label for="txtHeadCount" class="form-label">Total HeadCount</label>
-                            <input type="text" class="form-control" id="txtHeadCount" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label for="txtPackageValue" class="form-label">Package Value</label>
-                            <input type="text" class="form-control" id="txtPackageValue" placeholder="">
-                        </div>
-                        <div class="input-group date col">
-                            <input type="text" class="form-control" value="12-02-2012">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="txtBookId" class="form-label">Booking Id</label>
-                            <input type="text" class="form-control" id="txtBookId" placeholder="">
-                        </div>
-                    </div>
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+        <header>
+            <img src="../assets/img/logo.png" width="100">
 
-                    <div class="row">
-                        <div class="col">
-                            <label for="txtNightCount" class="form-label">Night Count</label>
-                            <input type="text" class="form-control" id="txtNightCount" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label for="txtDayCount" class="form-label">Day Count</label>
-                            <input type="text" class="form-control" id="txtdayCount" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label for="txtAdults" class="form-label">No of Adults</label>
-                            <input type="text" class="form-control" id="txtAdults" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label for="txtChildren" class="form-label">No of Children</label>
-                            <input type="text" class="form-control" id="txtChildren" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label for="Guide" class="form-label">Guide or Not</label>
-                            <select class="form-select form-select-sm" aria-label="Small select example" id="Guide">
-                                <option selected>Yes</option>
-                                <option value="1">No</option>
-                            </select>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="container"><span>Vehicle Details</span>
-                    <div class="row"style="margin-top: 15px">
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-4">
-                                    <label for="txtRegisterId" class="form-label">Register Id</label>
-                                    <input type="text" class="form-control" id="txtRegisterId" placeholder="">
-                                </div>
-                                <div class="col-4">
-                                    <label for="txtVehicleBrand" class="form-label">Vehicle Brand</label>
-                                    <input type="text" class="form-control" id="txtVehicleBrand" placeholder="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-2">
-                                    <label for="txtSeatCapacity" class="form-label">Seat Capacity</label>
-                                    <input type="text" class="form-control" id="txtSeatCapacity" placeholder="">
-                                </div>
-                                <div class="col-2">
-                                    <label for="txtFuelType" class="form-label">Fuel Type</label>
-                                    <input type="text" class="form-control" id="txtFuelType" placeholder="">
-                                </div>
-                                <div class="col-2">
-                                    <label for="txtTransmissionType" class="form-label">Transmission Type</label>
-                                    <input type="text" class="form-control" id="txtTransmissionType" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-2" id="img">
-                            <img src="/assets/images/axio.jpeg" alt="" width="300px">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="container"><span>Hotel Details</span>
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="txtHotelID" class="form-label">Hotel</label>
-                            <input type="text" class="form-control" id="txtHotelID" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label for="txtHotelName" class="form-label">Hotel</label>
-                            <input type="text" class="form-control" id="txtHotelName" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label for="Location" class="form-label">Location</label>
-                            <select class="form-select form-select-sm" aria-label="Small select example"id="Location">
-                                <option selected>Yes</option>
-                                <option value="1">No</option>
-                            </select>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="container"><span>Guide Details</span>
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="txtGuideId" class="form-label">Guide ID</label>
-                            <input type="text" class="form-control" id="txtGuideId" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label for="txtGuideName" class="form-label">Guide Name</label>
-                            <input type="text" class="form-control" id="txtGuideName" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label for="txtNumber" class="form-label">Number</label>
-                            <input type="text" class="form-control" id="txtNumber" placeholder="">
-                        </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="container"><span>Payment Details</span>
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="txtGuideValue" class="form-label">Guide Value</label>
-                            <input type="text" class="form-control" id="txtGuideValue" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label for="txtDays" class="form-label">No of Days</label>
-                            <input type="text" class="form-control" id="txtDays" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label for="txtTotal" class="form-label">Total</label>
-                            <input type="text" class="form-control" id="txtTotal" placeholder="">
-                        </div>
-                    </div>
-                    <div class="row">
-
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-        <span>
-          <button type="button" class="btn btn-secondary">Clear</button>
-          <button type="button" class="btn btn-primary">Proceed</button>
-        </span>
-            </div>
-
-
-        </div>
+        </header>
     </div>
-</div>
+</header>
+<main id="main" class="main">
+    <div class="pageTitle" id="pageOne">
+        <h1>BOOKING</h1>
+    </div>
+    </div>
+    <section class="section dashboard" style="margin-left: -19rem">
+        <div class="row">
+            <div class="col-lg-12 mt-lg-0 mt-5 mb-2"
+                 style="background-color: white;padding-top: 20px; border: 1px solid rgba(108,123,136,0.19);font-size: small;border-radius: 10px">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="h5 mb-4">Reservation Details</h5>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="span m-1">Reservation ID</span>
+                                    <input type="number" class="form-control" placeholder="NTB-001" readonly
+                                           name="bookingReservation_Id"
+                                           id="bookingReservationId">
+                                </div>
+                                <div class="col-4">
+                                    <span class="span m-1">Customer ID</span>
+                                    <input type="number" class="form-control" placeholder="" readonly
+                                           name="reservation_Customer_Id"
+                                           id="reservationCustomerId">
+                                </div>
+                                <div class="col-4">
+                                    <span class="span m-1">Date</span>
+                                    <input class="form-control" type="text" id="dateInput" readonly />
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="card-body">
+                        <form action="reservation" id="reservationDetails" method="post">
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <span class="span m-1">Package</span>
+                                    <input class="form-control" id="packageName" name="package_Name" type="text"
+                                           readonly>
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">Total headcount</span>
+                                    <input type="number" class="form-control" placeholder="" readonly name="head_count"
+                                           id="headCount">
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">Package Value</span>
+                                    <input type="text" class="form-control" placeholder="" readonly name="value"
+                                           id="package_value">
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">Start Date</span>
+                                    <input class="form-control" type="date" id="startDate"
+                                           name="start_Date"
+                                           value="YYYY-MM-DD" min="2023-10-01" max="2030-12-31" readonly/>
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">End Date</span>
+                                    <input class="form-control" type="date" id="endDate"
+                                           name="end_Date"
+                                           value="YYYY-MM-DD" min="2023-10-01" max="2030-12-31" readonly/>
+                                </div>
 
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <span class="span m-1">Night Count</span>
+                                    <input class="form-control" type="number" id="nightCount" name="night_Count"
+                                           readonly/>
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">Day Count</span>
+                                    <input class="form-control" type="number" id="dayCount" name="dayCount" readonly/>
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">No of Adults</span>
+                                    <input type="number" class="form-control" placeholder="" id="adults"
+                                           name="number_of_adults" readonly>
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">No of Children</span>
+                                    <input type="number" class="form-control" placeholder="" id="children"
+                                           name="number_of_children" readonly>
+                                </div>
+                                <div class="col">
+                                    <span class="span m-1">Guide or not</span>
+                                    <input class="form-control" id="guideStatus" name="guide_Status" readonly>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-lg-0 mt-6 mb-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="h5">Hotel Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="hotel" id="hotelDetails" method="post">
+                                <div class="row ">
+                                    <div class="col-4">
+                                        <span class="span m-1">Hotel ID</span>
+                                        <input class="form-control" id="hotelID" name="hotel_id" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Hotel</span>
+                                        <input class="form-control" id="hotelName" name="filter_hotel_name" readonly>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Location</span>
+                                        <input class="form-control" id="Location" name="filter_Location" readonly>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="h5">Guide Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="guide" id="guideDetails" method="post">
+                                <div class="row ">
+                                    <div class="col">
+                                        <span class="span m-1">Guide ID</span>
+                                        <input class="form-control" id="guide_id" name="guideid" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Guide Name</span>
+                                        <input type="text" class="form-control" placeholder="" readonly name="guideName"
+                                               id="guide_name">
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Number</span>
+                                        <input type="text" class="form-control" placeholder="" readonly
+                                               name="guideNumber"
+                                               id="guide_Number">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="h5">Vehicle Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="vehicle" id="vehicleDetails" method="post">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="span m-1">Register ID</span>
+                                        <select class="form-control" id="vehicleRegId" name="vehicle_Reg_Id">
+                                            <!-- <option value="">Select ID</option>
+                                             <option value="vehicle1">VRI-001</option>
+                                             <option value="vehicle2">VRI-002</option>
+                                             <option value="vehicle3">VRI-003</option>
+                                             <option value="vehicle4">VRI-004</option>
+                                             <option value="vehicle5">VRI-005</option>-->
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Vehicle brand</span>
+                                        <input class="form-control" id="vehicle_brand" name="vehiclebrand" readonly>
+                                    </div>
+
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <span class="span m-1">Seat Capacity</span>
+                                        <input type="text" class="form-control" placeholder="" readonly
+                                               name="seatCapacity"
+                                               id="vehicle_seatCapacity">
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Fuel Type</span>
+                                        <input type="text" class="form-control" placeholder="" readonly name="FuelType"
+                                               id="vehicle_Fuel_Type">
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Transmission Type</span>
+                                        <input type="text" class="form-control" placeholder="" readonly
+                                               name="transmission"
+                                               id="vehicle_transmission">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="h5">Payment Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="payment" id="paymentDetails" method="post">
+                                <div class="row ">
+                                    <div class="col">
+                                        <span class="span m-1">Guide value</span>
+                                        <input type="text" class="form-control" placeholder="" readonly
+                                               name="guide_Value"
+                                               id="guideValue">
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Number of Days</span>
+                                        <input type="number" class="form-control" placeholder="" name="All_days"
+                                               id="allDays">
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col">
+                                        <span class="span m-1">Total</span>
+                                        <input type="text" class="form-control" placeholder="" readonly name="total"
+                                               id="full_payment">
+                                    </div>
+                                    <div class="col">
+                                        <span class="span m-1">Payment Slip</span>
+                                        <input type="file" class="form-control" placeholder="" id="imageofslip"
+                                               name="image_of_slip">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex">
+                <button class="btn btn-savebtn float-right" id="saveBtn" type="button">Booking</button>
+                <button type="button" class="btn btn-cancel  float-right" id="updateBookingbtn">Cancel</button>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="../assets/lib/bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
+<script src="../assets/js/util/bookingController.js"></script>
+<!--<script src="../assets/js/RegisterUserController.js"></script>-->
+<!--<script src="../assets/js/indexController.js"></script>-->
+<!--<script src="../assets/js/Validation.js"></script>-->
+<!--<script src="../assets/js/ValidationWithRegex.js"></script>-->
 </body>
+<script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
+<script>
+    $(function () {
+        $('#datepicker').datepicker();
+    });
+</script>
 </html>
