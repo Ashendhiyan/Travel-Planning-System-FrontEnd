@@ -294,3 +294,74 @@ function loadTextFieldValues(){
     });
 
 }
+
+
+
+//Auto Generate id
+function autoGenerateId() {
+    $("#guideId").val("G-001");
+    $.ajax({
+        url:,
+        method:"GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (resp) {
+            let id = resp.value;
+            let tempid = parseInt(id.split("-")[1]);
+            tempid = tempid + 1;
+            if (tempid <= 9) {
+                $("#guideId").val("G-00" + tempid);
+            } else if (tempid <= 99) {
+                $("#guideId").val("G-0" + tempid);
+            } else {
+                $("#guideId").val("G-" + tempid);
+            }
+        },
+
+        error:function (error){
+            console.log(error);
+        }
+    })
+}
+
+
+
+//----------------------Load Guide Details-----------------------------------------
+
+$("#guideId").click(function (){
+    var searchGuide=$("#guideId").val();
+    $.ajax({
+        url:"http://localhost:8989/nextTravelPVTLtdGuideService/api/v1/guide/searchGuide/?guide_id="+searchGuide,
+        method:"GET",
+        contentType:"application/json",
+        dataType:"json",
+        success:function (res){
+            $("#guideName").val(res.guideName);
+            $("#number").val(res.number);
+            $("#manDayValue").val(res.manDayValue);
+        },
+        error:function (error){
+            console.log(error);
+        }
+    })
+});
+
+//------------------------Select Guide or not--------------------------------
+
+/*$("#").click(function (){
+    let selectedOption=$(this).val();
+
+    if (selectedOption === "yes"){
+        $.ajax({
+            url:bookingBaseUrl+"guide/yesGuide",
+            method:"GET",
+            dataType:"json",
+            success:function (res){
+                $("#guide_id").val(res.guideid);
+            },
+            error:function (error){
+                console.log(error);
+            }
+        });
+    }
+})*/

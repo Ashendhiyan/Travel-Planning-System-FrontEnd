@@ -125,6 +125,7 @@ function save() {
         let packageCategory = $('#packageCategory').val();
         let hotelContactNumber = $('#hotelContactNumber').val();
         let cancelCriteria = $('#cancelCriteria').val();
+        let remarks = $('#remarks').val();
         let hotelFee = $('#hotelFee').val();
         let email = $('#email').val();
         let image = $('#image')[0].files[0];
@@ -143,6 +144,7 @@ function save() {
                 packageCategory: packageCategory,
                 hotelContactNumber: hotelContactNumber,
                 cancelCriteria: cancelCriteria,
+                remarks:remarks,
                 hotelFee: hotelFee,
                 email: email,
                 image: image
@@ -180,6 +182,7 @@ function update() {
         let packageCategory = $('#packageCategory').val();
         let hotelContactNumber = $('#hotelContactNumber').val();
         let cancelCriteria = $('#cancelCriteria').val();
+        let remarks = $('#remarks').val();
         let hotelFee = $('#hotelFee').val();
         let email = $('#email').val();
         let image = $('#image')[0].files[0];
@@ -197,6 +200,7 @@ function update() {
                 packageCategory: packageCategory,
                 hotelContactNumber: hotelContactNumber,
                 cancelCriteria: cancelCriteria,
+                remarks:remarks,
                 hotelFee: hotelFee,
                 email: email,
                 image: image
@@ -231,6 +235,7 @@ function search() {
             $('#packageCategory').val(response.packageCategory);
             $('#hotelContactNumber').val(response.hotelContactNumber);
             $('#cancelCriteria').val(response.cancelCriteria);
+            $('#remarks').val(response.remarks);
             $('#hotelFee').val(response.hotelFee);
             $('#email').val(response.email);
         },
@@ -246,6 +251,7 @@ function search() {
             $('#packageCategory').val(" ");
             $('#hotelContactNumber').val(" ");
             $('#cancelCriteria').val(" ");
+            $("#remarks").val("");
             $('#hotelFee').val("");
             $('#email').val(" ");
             alert("Hotel Not Found..!");

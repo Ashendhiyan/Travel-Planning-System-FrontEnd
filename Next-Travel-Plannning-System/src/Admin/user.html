@@ -24,45 +24,37 @@
 
 <form class="row g-3 needs-validation" novalidate>
     <div class="col-md-2">
-        <label class="form-label" for="hotelId">User ID</label>
-        <input class="form-control" id="hotelId" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="userId">User ID</label>
+        <input class="form-control" id="userId" required type="text" >
+        <p><small class="text-danger" id="userIdError"></small></p>
     </div>
 
     <div class="col-md-3">
-        <label class="form-label" for="hotelLocation">Name</label>
-        <input class="form-control" id="hotelLocation" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" id="name" required type="text" >
+        <p><small class="text-danger" id="userNameError"></small></p>
     </div>
     <div class="col-md-3">
-        <label class="form-label" for="hotelName">NIC</label>
-        <input class="form-control" id="hotelName" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="nic">NIC</label>
+        <input class="form-control" id="nic" required type="text" >
+        <p><small class="text-danger" id="userNicError"></small></p>
     </div>
 
     <div class="col-md-3">
-        <label class="form-label" for="nicImage">NIC</label>
+        <label class="form-label" for="nicImage">NIC Image</label>
         <img src="../assets/images/img.png" alt="">
-        <input class="mt-2" id="nicImage" name="hotelImage" type="file">
+        <input class="mt-2" id="nicImage" name="nicImage" type="file">
     </div>
 
     <div class="col-md-2">
-        <label class="form-label" for="hotelContactNumber">Age</label>
-        <input class="form-control" id="hotelContactNumber" required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="age">Age</label>
+        <input class="form-control" id="age" required type="text" >
+        <p><small class="text-danger" id="userAgeError"></small></p>
     </div>
 
     <div class="col-md-2">
-        <label class="form-label" for="roomType">Gender</label>
-        <select class="form-select" id="roomType" required>
+        <label class="form-label" for="gender">Gender</label>
+        <select class="form-select" id="gender" required>
             <option disabled selected value="">Select Gender</option>
             <option>Male</option>
             <option>Female</option>
@@ -72,24 +64,18 @@
         </div>
     </div>
     <div class="col-md-3">
-        <label class="form-label" for=" cancelCriteria">Email</label>
-        <input class="form-control"  id=" cancelCriteria"  required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control"  id="email"  required type="text" >
+        <p><small class="text-danger" id="userEmailError"></small></p>
     </div>
     <div class="col-md-4">
-        <label class="form-label" for=" remarks">Tel No</label>
-        <input class="form-control"  id=" remarks"  required type="text" >
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+        <label class="form-label" for="number">Tel No</label>
+        <input class="form-control"  id="number"  required type="text" >
+        <p><small class="text-danger" id="userNumberError"></small></p>
     </div> <div class="col-md-2">
-    <label class="form-label" for=" hotelFee">Address</label>
-    <input class="form-control"  id=" hotelFee"  required type="text" >
-    <div class="valid-feedback">
-        Looks good!
-    </div>
+    <label class="form-label" for="address">Address</label>
+    <input class="form-control"  id="address"  required type="text" >
+    <p><small class="text-danger" id="userAddressError"></small></p>
 </div>
 </form>
 
@@ -119,7 +105,7 @@
     </tbody>
 </table>
 
-<script src="../assets/js/util/manageHotel.js"></script>
+<script src="../assets/js/util/manageUser.js"></script>
 
 
 </body>
