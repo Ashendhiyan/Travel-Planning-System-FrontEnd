@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hotel</title>
+    <title>Package</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="../assets/JQuery/jquery-3.6.1.min.js"></script>
@@ -24,8 +24,8 @@
 
 <form class="row g-3 needs-validation" novalidate>
     <div class="col-md-4">
-        <label class="form-label" for="hotelId">Package ID</label>
-        <input class="form-control" id="hotelId" required type="text" >
+        <label class="form-label" for="packageId">Package ID</label>
+        <input class="form-control" id="packageId" required type="text" >
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -33,15 +33,15 @@
 
 
     <div class="col-md-4">
-        <label class="form-label" for="hotelLocation">Category</label>
-        <input class="form-control" id="hotelLocation" required type="text" >
+        <label class="form-label" for="category">Category</label>
+        <input class="form-control" id="category" required type="text" >
         <div class="valid-feedback">
             Looks good!
         </div>
     </div>
     <div class="col-md-4">
-        <label class="form-label" for="hotelName">Package Fee</label>
-        <input class="form-control" id="hotelName" required type="text" >
+        <label class="form-label" for="packageFee">Package Fee</label>
+        <input class="form-control" id="packageFee" required type="text" >
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -50,17 +50,17 @@
     <div class="row" style="margin-left:0rem; margin-top: 5rem">
         <div class="col-md-4">
             <span class="span m-1">No of Night </span>
-            <input type="number" class="form-control"   placeholder="" id="nightCount" name="nightCount">
+            <input type="number" class="form-control"   placeholder="" id="noOfNights" name="nightCount">
             <span class="control-error"></span>
         </div>
         <div class="col-md-4">
             <span class="span m-1">No of Day </span>
-            <input type="number" class="form-control"   placeholder="" id="dayCount" name="dayCount">
+            <input type="number" class="form-control"   placeholder="" id="noOfDay" name="dayCount">
             <span class="control-error"></span>
         </div>
         <div class="col-md-4">
             <span class="span m-1">Head Count</span>
-            <input  class="form-control" type="number" id="totalHeadCount" name="totalHeadCount"><br><br>
+            <input  class="form-control" type="number" id="headCount" name="headCount"><br><br>
             <span class="control-error"></span>
         </div>
     </div>
@@ -97,7 +97,7 @@
     </tbody>
 </table>
 
-<script src="../assets/js/util/manageHotel.js"></script>
+<script src="../assets/js/util/managePackage.js"></script>
 
 
 </body>
